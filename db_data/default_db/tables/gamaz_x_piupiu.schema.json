@@ -1,0 +1,12 @@
+{
+  "fields": [
+    {
+      "name": "A_piu",
+      "type": "integer"
+    },
+    {
+      "name": "B_piu2",
+      "type": "integer"
+    }
+  ]
+}

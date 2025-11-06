@@ -1,0 +1,8 @@
+{
+  "fields": [
+    {
+      "name": "piu2",
+      "type": "integer"
+    }
+  ]
+}

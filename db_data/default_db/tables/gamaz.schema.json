@@ -1,0 +1,8 @@
+{
+  "fields": [
+    {
+      "name": "piu",
+      "type": "integer"
+    }
+  ]
+}

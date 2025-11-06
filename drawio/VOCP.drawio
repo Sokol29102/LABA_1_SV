@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.5">
+  <diagram name="Use Case" id="2w42xsBNWxSLMJhY_Ewh">
+    <mxGraphModel dx="137240" dy="101891" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="e6" style="endArrow=none;" edge="1" />
+        <mxCell id="1" parent="e6" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-194" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-126170" y="-94215" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-195" value="Перевірити стан таблиці (Dirty/Loaded)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-126030" y="-94220" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-196" value="Dirty?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-125690" y="-94220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-197" value="Підготувати шляхи збереження" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-125530" y="-94220" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-198" value="Серіалізувати Schema → *.schema.json" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-125250" y="-94220" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-199" value="Відкрити *.rows.jsonl" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-125250" y="-94145" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-200" value="Записати рядки (Row → JSONL)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-125250" y="-94070" width="260" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-201" value="I/O помилка?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-125290" y="-94000" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-202" value="Логувати й показати помилку" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8d7da;strokeColor=#d9534f;" vertex="1" parent="1">
+          <mxGeometry x="-125410" y="-93915" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-203" value="Оновити db.meta.json" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-125130" y="-93915" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-204" value="Закрити файли" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-125130" y="-93845" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-205" value="Позначити Table як Saved" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#039be5;" vertex="1" parent="1">
+          <mxGeometry x="-125130" y="-93775" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-206" value="Не Dirty → збереження не потрібне" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="-125530" y="-94135" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-207" value="End (OK)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-125130" y="-93705" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-208" value="End (Error)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8d7da;strokeColor=#d9534f;" vertex="1" parent="1">
+          <mxGeometry x="-125410" y="-93845" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-209" style="strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-194" target="-MY35P4k7A4iDK7WoR3S-195" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-210" style="strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-195" target="-MY35P4k7A4iDK7WoR3S-196" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-211" value="так" style="strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-196" target="-MY35P4k7A4iDK7WoR3S-197" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-212" value="ні" style="strokeWidth=2;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-196" target="-MY35P4k7A4iDK7WoR3S-206" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-213" style="strokeWidth=2;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-206" target="-MY35P4k7A4iDK7WoR3S-207" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-214" style="strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-197" target="-MY35P4k7A4iDK7WoR3S-198" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-215" style="strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-198" target="-MY35P4k7A4iDK7WoR3S-199" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-216" style="strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-199" target="-MY35P4k7A4iDK7WoR3S-200" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-217" style="strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-200" target="-MY35P4k7A4iDK7WoR3S-201" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-218" value="так" style="strokeWidth=2;endArrow=classic;endFill=1;strokeColor=#d9534f;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-201" target="-MY35P4k7A4iDK7WoR3S-202" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-219" style="strokeWidth=2;endArrow=classic;endFill=1;strokeColor=#d9534f;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-202" target="-MY35P4k7A4iDK7WoR3S-208" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-220" value="ні" style="strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-201" target="-MY35P4k7A4iDK7WoR3S-203" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-221" style="strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-203" target="-MY35P4k7A4iDK7WoR3S-204" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-222" style="strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-204" target="-MY35P4k7A4iDK7WoR3S-205" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-223" style="strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-205" target="-MY35P4k7A4iDK7WoR3S-207" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-224" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-194" target="-MY35P4k7A4iDK7WoR3S-195">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-126090" y="-94145" as="sourcePoint" />
+            <mxPoint x="-126040" y="-94195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

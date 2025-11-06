@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.5">
+  <diagram name="Use Case" id="2w42xsBNWxSLMJhY_Ewh">
+    <mxGraphModel dx="119494" dy="89223" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="e6" style="endArrow=none;" edge="1" />
+        <mxCell id="1" parent="e6" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-126" value="View" style="swimlane;horizontal=0;startSize=30;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-54590" y="-34940" width="320" height="840" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-127" value="Форма введення рядка&#xa;(поля за Schema)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-126">
+          <mxGeometry x="40" y="60" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-128" value="Кнопка: &quot;Додати&quot;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-126">
+          <mxGeometry x="40" y="150" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-129" value="Повідомлення про помилку" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#d9534f;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-126">
+          <mxGeometry x="40" y="690" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-130" value="Тост / нотифікація: успіх" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#5cb85c;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-126">
+          <mxGeometry x="40" y="770" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-131" value="Object" style="swimlane;horizontal=0;startSize=30;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-54260" y="-34940" width="320" height="840" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-132" value="Table" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;strokeColor=#1e88e5;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-131">
+          <mxGeometry x="40" y="60" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-133" value="Schema" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;strokeColor=#1e88e5;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-131">
+          <mxGeometry x="40" y="130" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-134" value="Row (новий)" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;strokeColor=#1e88e5;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-131">
+          <mxGeometry x="40" y="260" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-135" value="Process" style="swimlane;horizontal=0;startSize=30;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-53930" y="-34940" width="480" height="840" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-136" value="Зчитати введені значення з форми" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-135">
+          <mxGeometry x="40" y="60" width="440" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-137" value="Парсити значення за типами Schema&#xa;· integer/real/char/string&#xa;· complexInteger/complexReal (a+bi або пари)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-135">
+          <mxGeometry x="40" y="140" width="440" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-138" value="Перевірити валідність типів і обов&#39;язкових полів" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-135">
+          <mxGeometry x="40" y="255" width="440" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-139" value="Створити Row з нормалізованими значеннями" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-135">
+          <mxGeometry x="40" y="380" width="440" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-141" value="Позначити Table як Dirty" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-135">
+          <mxGeometry x="40" y="540" width="440" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-142" value="(Опційно) Зберегти Table на диск" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-135">
+          <mxGeometry x="40" y="620" width="440" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-143" value="Control" style="swimlane;horizontal=0;startSize=30;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-53445" y="-34940" width="220" height="840" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-144" value="Натиснуто &quot;Додати&quot;?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-143">
+          <mxGeometry x="40" y="60" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-145" value="Валідація OK?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-143">
+          <mxGeometry x="40" y="260" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-146" value="Зберігати одразу?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-143">
+          <mxGeometry x="40" y="600" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-147" style="endArrow=block;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-128" target="-MY35P4k7A4iDK7WoR3S-144">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-148" style="endArrow=block;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-144" target="-MY35P4k7A4iDK7WoR3S-136">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-149" style="endArrow=block;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-136" target="-MY35P4k7A4iDK7WoR3S-137" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-150" style="endArrow=block;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-137" target="-MY35P4k7A4iDK7WoR3S-138" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-151" style="endArrow=block;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-138" target="-MY35P4k7A4iDK7WoR3S-145" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-152" value="так" style="endArrow=block;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-145" target="-MY35P4k7A4iDK7WoR3S-139">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-153" value="ні" style="endArrow=block;strokeColor=#d9534f;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-140" target="-MY35P4k7A4iDK7WoR3S-129">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-154" style="endArrow=block;dashed=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-139" target="-MY35P4k7A4iDK7WoR3S-134">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-155" style="endArrow=block;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-139" target="-MY35P4k7A4iDK7WoR3S-140" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-156" style="endArrow=block;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-140" target="-MY35P4k7A4iDK7WoR3S-141" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-157" style="endArrow=block;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-141" target="-MY35P4k7A4iDK7WoR3S-146" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-158" value="так" style="endArrow=block;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-146" target="-MY35P4k7A4iDK7WoR3S-142" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-159" value="ні" style="endArrow=block;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-146" target="-MY35P4k7A4iDK7WoR3S-130" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-160" style="endArrow=block;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-142" target="-MY35P4k7A4iDK7WoR3S-130" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-161" value="отримати типи поля" style="dashed=1;endArrow=open;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-137" target="-MY35P4k7A4iDK7WoR3S-133" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-162" value="append()" style="dashed=1;endArrow=open;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-140" target="-MY35P4k7A4iDK7WoR3S-132" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-163" value="" style="endArrow=block;strokeColor=#d9534f;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-145" target="-MY35P4k7A4iDK7WoR3S-140">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-53383" y="-34621" as="sourcePoint" />
+            <mxPoint x="-54352" y="-34250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-140" value="Додати Row у Table (append)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-53890" y="-34480" width="440" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

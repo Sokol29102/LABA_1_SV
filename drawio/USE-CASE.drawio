@@ -1,0 +1,115 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.5">
+  <diagram name="Use Case" id="2w42xsBNWxSLMJhY_Ewh">
+    <mxGraphModel dx="55826" dy="35995" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="e6" style="endArrow=none;" edge="1" />
+        <mxCell id="1" parent="e6" />
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-92" value="Database&#xa;---------------------&#xa;- name: string&#xa;- path: string&#xa;- tables: List&lt;Table&gt;&#xa;---------------------&#xa;+ create_table(name, schema): Table&#xa;+ delete_table(name): bool&#xa;+ load(): void&#xa;+ save(): void" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-51620" y="-32850" width="240" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-93" value="Table&#xa;---------------------&#xa;- name: string&#xa;- schema: Schema&#xa;- rows: List&lt;Row&gt;&#xa;---------------------&#xa;+ insert(values: dict): void&#xa;+ update(index: int, values: dict): void&#xa;+ delete(index: int): void&#xa;+ view(limit: int=0): List&lt;Row&gt;" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-51260" y="-32850" width="280" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-94" value="Schema&#xa;---------------------&#xa;- fields: List&lt;Field&gt;&#xa;---------------------&#xa;+ validate_row(row: Row): bool" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-50900" y="-32850" width="220" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-95" value="Field&#xa;---------------------&#xa;- name: string&#xa;- type: Type&#xa;---------------------" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-50640" y="-32850" width="180" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-96" value="Row&#xa;---------------------&#xa;- values: dict&lt;string, any&gt;&#xa;---------------------&#xa;+ as_dict(): dict" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-51260" y="-32590" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-97" value="&lt;&lt;abstract&gt;&gt; Type&#xa;---------------------&#xa;- name: string&#xa;---------------------&#xa;+ parse(value: any): any&#xa;+ validate(value: any): bool&#xa;+ serialize(value: any): any" style="shape=umlClass;whiteSpace=wrap;html=1;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="-50860" y="-32650" width="240" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-98" value="IntegerType" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-50940" y="-32430" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-99" value="RealType" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-50760" y="-32430" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-100" value="CharType" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-50580" y="-32430" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-101" value="StringType" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-50400" y="-32430" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-102" value="ComplexIntegerType&#xa;---------------------&#xa;// (a, b) ∈ Z² або &quot;a+bi&quot;" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-50860" y="-32350" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-103" value="ComplexRealType&#xa;---------------------&#xa;// (a, b) ∈ R² або &quot;a+bi&quot;" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-50620" y="-32350" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-104" value="CartesianOp&#xa;---------------------&#xa;+ execute(A: Table, B: Table): Table" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-51620" y="-32590" width="260" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-105" value="Storage&#xa;---------------------&#xa;+ save_table(t: Table): void&#xa;+ load_table(name: string): Table&#xa;+ save_db(db: Database): void&#xa;+ load_db(path: string): Database" style="shape=umlClass;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-51620" y="-32410" width="260" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-106" style="endArrow=none;startArrow=diamond;startFill=1;labelBackgroundColor=none;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-92" target="-MY35P4k7A4iDK7WoR3S-93">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-51360" y="-32750" as="sourcePoint" />
+            <mxPoint x="-51260" y="-32750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-107" value="1 .. *" style="edgeLabel;resizable=0;align=center;verticalAlign=top;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-106">
+          <mxGeometry x="0.6" y="-0.2" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-108" style="endArrow=none;startArrow=diamond;startFill=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-93" target="-MY35P4k7A4iDK7WoR3S-94">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-109" value="1 .. 1" style="edgeLabel;resizable=0;align=center;verticalAlign=top;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-108">
+          <mxGeometry x="0.6" y="-0.2" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-110" style="endArrow=none;startArrow=diamond;startFill=1;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-93" target="-MY35P4k7A4iDK7WoR3S-96">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-111" value="0 .. *" style="edgeLabel;resizable=0;align=center;verticalAlign=top;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-110">
+          <mxGeometry x="0.6" y="-0.2" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-112" style="endArrow=none;startArrow=diamond;startFill=0;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-94" target="-MY35P4k7A4iDK7WoR3S-95">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-113" value="1 .. *" style="edgeLabel;resizable=0;align=center;verticalAlign=top;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-112">
+          <mxGeometry x="0.6" y="-0.2" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-114" style="endArrow=none;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-95" target="-MY35P4k7A4iDK7WoR3S-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-115" value="1" style="edgeLabel;resizable=0;align=center;verticalAlign=top;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-114">
+          <mxGeometry x="0.6" y="-0.2" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-116" style="endArrow=block;endFill=0;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-98" target="-MY35P4k7A4iDK7WoR3S-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-117" style="endArrow=block;endFill=0;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-99" target="-MY35P4k7A4iDK7WoR3S-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-118" style="endArrow=block;endFill=0;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-100" target="-MY35P4k7A4iDK7WoR3S-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-119" style="endArrow=block;endFill=0;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-101" target="-MY35P4k7A4iDK7WoR3S-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-120" style="endArrow=block;endFill=0;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-102" target="-MY35P4k7A4iDK7WoR3S-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-121" style="endArrow=block;endFill=0;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-103" target="-MY35P4k7A4iDK7WoR3S-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-122" style="dashed=1;endArrow=open;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-104" target="-MY35P4k7A4iDK7WoR3S-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-123" value="uses (A,B) → C" style="edgeLabel;resizable=0;align=center;verticalAlign=middle;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-122">
+          <mxGeometry x="0.5" y="-0.8" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-124" style="endArrow=none;" edge="1" parent="1" source="-MY35P4k7A4iDK7WoR3S-92" target="-MY35P4k7A4iDK7WoR3S-105">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-MY35P4k7A4iDK7WoR3S-125" value="persist/restore" style="edgeLabel;resizable=0;align=center;verticalAlign=top;" vertex="1" parent="-MY35P4k7A4iDK7WoR3S-124">
+          <mxGeometry x="0.5" y="-0.2" relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
